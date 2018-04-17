@@ -1,0 +1,8 @@
+<div class = "bg_white">
+<h1>Here is a list of all our groups</h1>
+<% @groups.each do | group | %>
+  <h3>Name: <%= group.name %></h3>
+  <%= group.leader_name %><br>
+  <%= link_to "Join", "/groups/join/?group=#{group.id}", method: :get %>
+<% end %>
+</div>

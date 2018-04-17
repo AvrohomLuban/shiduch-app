@@ -1,0 +1,24 @@
+<h1>Fill In Some User Information</h1>
+<%= form_tag "/profiles/new", method: :post, multipart: true do %>
+  <div>First Name</div>
+  <input type = "text" name = "first_name">
+  <div>Last Name</div>
+  <input type = "text" name = "last_name">
+  <div>City</div>
+  <input type = "text" name = "city">
+  <div>Age</div>
+  <input type = "text" name = "age">
+  <div>Gender</div>
+  <input type = "text" name = "gender">
+  <div>Description</div>
+  <input type = "text" name = "description">
+  <div>
+    <%= label_tag :image %>
+    <%= file_field_tag :image %>
+  </div>
+  <div>
+    <%= label_tag :resume %>
+    <%= file_field_tag :resume %>
+  </div>
+  <input type = "submit" name = "submit">
+<% end %>

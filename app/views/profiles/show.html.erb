@@ -1,0 +1,9 @@
+<h1><%= @profile.first_name %> <%= @profile.last_name %><br></h1>
+Age: <%= @profile.age %><br>
+Gender: <%= @profile.gender %><br>
+City: <%= @profile.city %><br>
+Description: <%= @profile.description %><br>
+Image: <%= image_tag(@profile.image.url, :size => '260x180') %>
+Resume:
+<%= link_to @profile.resume_file_name, @profile.resume.url %>
+
